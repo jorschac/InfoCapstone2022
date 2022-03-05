@@ -4,12 +4,12 @@ import {AutoComplete, Input} from 'antd'
 const {Search} = Input
 
 export default function SearchBar(props:any) {
-    const {list} = props
+    const {list,width} = props
     return(
         <div style={{width: '100%'}} className='barInner'>
             <AutoComplete 
                 onSelect={redirect}
-                style={{width: '100%', borderRadius: '25px'}}
+                style={{width: width, borderRadius: '25px'}}
                 dataSource={list}
             >
                 <Search 

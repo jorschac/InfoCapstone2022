@@ -24,10 +24,10 @@ export default function(){
         <div className={styles.contentWrapper}>
           <div className={styles.logo}>
               <img src={require('../assets/logo.jpeg')} alt='logo icon' width='42px' height='42px'/>
-              <p style={{margin: 0, color: '#1890FF'}}>Course Saver</p>
+              <p style={{margin: 0, color: '#1890FF'}}>Course Expert</p>
           </div>
           <div className={styles.barWrapper}>
-            <SearchBar list={courseList}/>
+            <SearchBar list={courseList} width='100%'/>
           </div>
         </div>
       );
