@@ -24,11 +24,13 @@
     "axios": "^0.26.0",
     "react": "17.x",
     "react-dom": "17.x",
+    "redux-logger": "^3.0.6",
     "umi": "^3.5.21"
   },
   "devDependencies": {
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@types/redux-logger": "^3.0.9",
     "@umijs/preset-react": "1.x",
     "@umijs/test": "^3.5.21",
     "lint-staged": "^10.0.7",
