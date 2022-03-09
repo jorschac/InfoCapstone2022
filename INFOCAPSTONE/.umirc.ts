@@ -5,9 +5,17 @@ export default defineConfig({
     type: 'none',
   },
   hash: true,
+  theme: {
+    '@primary-color': '#a78cf2',
+  },
   history: {type: 'hash'},
   routes: [
-    { path: '/', component: '@/pages/index' },
+    { path: '/courseInfo', component: '@/layouts/index', 
+      routes: [{path: '/courseInfo/detail', component: '@/pages/courseInfoPage/index'},
+               {path: '/courseInfo/QA', component: '@/pages/QAPage'}]
+    },
+
+    { path: '/', component: '@/pages/index', exact:true },
   ],
   fastRefresh: {},
   antd: {},

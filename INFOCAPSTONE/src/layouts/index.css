@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.courseDescribtion {
+    padding-left: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.headArea {
+    background-color: white;
+    margin-bottom: 1%;
+}
+
+.cardsContainer {
+    background-color: #c9a1a1;
+    width: 97%;
+    margin: 0 auto;
+}

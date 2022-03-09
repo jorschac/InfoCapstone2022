@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
+
+
+
 .contentWrapper {
   position: absolute;
   width: 100%;
@@ -31,4 +34,11 @@
   justify-content: space-around;
   align-items: center;
   transform: translateY(-200%);
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
 }
