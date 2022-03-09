@@ -5,6 +5,8 @@ import styles from './index.css';
 import { connect } from 'dva';
 import axios from 'axios';
 import { Tag, Divider, Menu } from 'antd';
+import NavBar from '../components/navBar' 
+
 
 /**
  * courseInfo页面最上边的那个显示课程信息的组件
@@ -61,9 +63,12 @@ function headArea(props: any) {
   return (
     <div style={{ backgroundColor: '#F0F2F5' }}>
       <div className={styles.headArea}>
-        <p>this is navBar placeholder</p>
-        <Divider style={{ marginBottom: '-2px' }} />
-        <h3 style={{ display: 'inline-block', padding: '30px 30px 0px' }}>
+        <div>
+        </div>
+        <NavBar style={{marginTop: '10%'}}/>
+        <Divider style={{marginBottom: '-15px'}} />
+
+        <h3 style={{ display: 'inline-block', padding: '50px 30px 0px' }}>
           {state.course_code} {state.course_title} (
           {state.credit == '' ? 'Na' : state.credit})
         </h3>
