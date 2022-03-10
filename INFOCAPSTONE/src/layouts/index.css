@@ -11,7 +11,11 @@
 }
 
 .cardsContainer {
-    background-color: #c9a1a1;
-    width: 97%;
+    background-color: white;
+    width: 90%;
     margin: 0 auto;
+}
+
+body {
+    background-color: #F0F2F5;
 }

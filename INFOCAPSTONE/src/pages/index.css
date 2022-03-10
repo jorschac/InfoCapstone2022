@@ -38,6 +38,7 @@
 
 .cards {
   display: flex;
+  padding: 30px;
   align-items: center;
   justify-content: center;
   flex-flow: column;

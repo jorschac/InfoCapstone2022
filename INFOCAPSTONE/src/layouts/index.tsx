@@ -6,12 +6,13 @@ import { connect } from 'dva';
 import axios from 'axios';
 import { Tag, Divider, Menu } from 'antd';
 
+
 /**
  * courseInfo页面最上边的那个显示课程信息的组件
  * @param props 
  */
 function headArea(props: any) {
-  const { updateProfessor, updateCourseCode} = props;
+  const { updateProfessor, updateCourseCode, courseCode} = props;
   const initialState = {
     tags: [],
     course_code: '',
@@ -20,12 +21,18 @@ function headArea(props: any) {
     description: '',
   };
   const [state, setState] = useState(initialState);
-  const [currentKey, setCurrentKey] = useState('courseOverview');
-  useEffect(() => {
+  const [currentKey, setCurrentKey] = useState('detail');
+  useEffect(()=>{
+    console.log('rerender..')
     //判断当前的路径是否合法，若不合法，则跳回home界面
-    if (!history.location.query.code) {
+    if (['/courseInfo/detail'].includes(history.location.pathname) && !history.location.query.code) {
       history.push('/');
     }
+    if(['/courseInfo/QA'].includes(history.location.pathname)) {
+      setCurrentKey('QA')
+    }
+  })
+  useEffect(() => {
     let code: string | string[] | null = history.location.query
       ? history.location.query.code
       : '';
@@ -55,11 +62,12 @@ function headArea(props: any) {
   let clickHandler = (e: any) => {
     if (currentKey != e.key) {
       setCurrentKey(e.key);
+      history.push(`/courseInfo/${e.key}?code=${courseCode}`);
     }
   };
 
   return (
-    <div style={{ backgroundColor: '#F0F2F5' }}>
+    <div style={{ backgroundColor: '#F0F2F5'}}>
       <div className={styles.headArea}>
         <p>this is navBar placeholder</p>
         <Divider style={{ marginBottom: '-2px' }} />
@@ -77,7 +85,7 @@ function headArea(props: any) {
           selectedKeys={[currentKey]}
           style={{ paddingLeft: '10px' }}
         >
-          <Menu.Item key="courseOverview">Course Overview</Menu.Item>
+          <Menu.Item key="detail">Course Overview</Menu.Item>
           <Menu.Item key="QA">QA</Menu.Item>
         </Menu>
       </div>
@@ -91,6 +99,7 @@ function headArea(props: any) {
 const mapStateProps = (state: any) => {
   return {
     professors: state.courseInfo.professors,
+    courseCode: state.courseInfo.courseCode,
   };
 };
 

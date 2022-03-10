@@ -1,0 +1,18 @@
+.barContainer {
+    display: flex;
+    width: 40vw;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2vw 0;
+}
+
+.twoBarsRow {
+    display: flex;
+    justify-content: center;
+    margin: 1.2vh;
+}
+
+.bars {
+    display: flex;
+    flex-direction: column;
+}
