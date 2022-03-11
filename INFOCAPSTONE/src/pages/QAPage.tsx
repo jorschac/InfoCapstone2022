@@ -10,7 +10,6 @@ import {Divider} from 'antd'
 function QAPage(props:any){
     return (
         <div className={styles.cards}>
-            <img src={require('../assets/coffin_dance.gif')} alt='git' width='700vh' height='400vh'/>
             <h1>QA is coming soon...</h1>
         </div>
     );
