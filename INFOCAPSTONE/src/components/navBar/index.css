@@ -1,0 +1,17 @@
+
+
+.navBarWrapper {
+    display: flex;
+    justify-content: start;
+    width: 90%;
+    padding: 1vh 1vw;
+}
+
+.title {
+    width: 27vw;
+    color: #755ebf;
+    margin: 1.9vh 1.2vw 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+

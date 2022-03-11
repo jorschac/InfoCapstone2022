@@ -3,6 +3,7 @@ import { history } from 'umi';
 import { useEffect, useState } from 'react';
 import styles from './index.css';
 import { connect } from 'dva';
+import NavBar from '@/components/navBar'
 import axios from 'axios';
 import { Tag, Divider, Menu } from 'antd';
 
@@ -46,7 +47,7 @@ function headArea(props: any) {
         updateCourseCode(Response.data.data.course_code);
         updateProfessor(Response.data.data.professors);
       });
-  }, []);
+  }, [courseCode]);
   //把tags转换为标签组件
   const tags = !state.tags.length
     ? []
@@ -69,8 +70,8 @@ function headArea(props: any) {
   return (
     <div style={{ backgroundColor: '#F0F2F5'}}>
       <div className={styles.headArea}>
-        <p>this is navBar placeholder</p>
-        <Divider style={{ marginBottom: '-2px' }} />
+        <NavBar/>
+        <Divider style={{ marginBottom: '-2px', marginTop: '12px'}} />
         <h3 style={{ display: 'inline-block', padding: '30px 30px 0px' }}>
           {state.course_code} {state.course_title} (
           {state.credit == '' ? 'Na' : state.credit})

@@ -19,7 +19,8 @@ export default {
 			fail: ['F', '0'],
 			withdraw: ['W', 'withdraw']
         },
-        breakdown: {}
+        breakdown: {},
+        courseMap: new Map()
     },
     reducers: {
         update(state: any, {payload}: any){
@@ -33,6 +34,9 @@ export default {
         },
         updateBreakdown(state: any, {payload}: any) {
             return {...state, breakdown: payload}
+        },
+        updateCourseMap(state: any, {payload}: any) {
+            return {...state, courseMap: payload}
         }
     }
 }

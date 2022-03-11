@@ -8,8 +8,8 @@ import axios from 'axios';
 const { Search } = Input;
 
 function SearchBar(props: any) {
-  const { courseList, width, update } = props;
-  const [codeMp, setcodeMp] = useState(new Map());
+  const { courseList, width, update, size='large' ,courseMap, updateCourseMap, updateCourseCode} = props;
+  //const [codeMp, setcodeMp] = useState(new Map());
   function searchHandler(val: string) {
     axios
       .get(
@@ -24,13 +24,14 @@ function SearchBar(props: any) {
           currentMap.set(val.course_full_name, val.course_code);
           return  val.course_full_name;
         });
-        setcodeMp(currentMap);
+        updateCourseMap(currentMap);
         update(results);
       });
   }
 
   function redirect(val: string, obj?: Object): void {
-    history.push('/courseInfo/detail?code=' + codeMp.get(val));
+    updateCourseCode(courseMap.get(val))
+    history.push('/courseInfo/detail?code=' + courseMap.get(val));
   }
 
   return (
@@ -43,7 +44,8 @@ function SearchBar(props: any) {
       >
         <Search
           placeholder="Search for course titles e.g MATH 124"
-          size="large"
+          size={size}
+          style={{borderRadius: '10px'}}
         />
       </AutoComplete>
     </div>
@@ -53,6 +55,7 @@ function SearchBar(props: any) {
 const mapStateProps = (state: any) => {
   return {
     courseList: state.courseInfo.courseList,
+    courseMap: state.courseInfo.courseMap,
   };
 };
 
@@ -63,6 +66,18 @@ const actionCreator = {
       payload,
     };
   },
+  updateCourseMap: (payload: Map<any, any>)=>{
+    return {
+      type: 'courseInfo/updateCourseMap',
+      payload,
+    }
+  },
+  updateCourseCode: (payload: string) => {
+    return {
+        type: 'courseInfo/updateCourseCode',
+        payload,
+    };
+  }
 };
 
 export default connect(mapStateProps, actionCreator)(SearchBar);
