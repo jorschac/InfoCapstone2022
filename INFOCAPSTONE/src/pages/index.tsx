@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './index.css';
 import SearchBar from '../components/searchBar';
+import MinMaxLayout from '../components/recommendationView/recommendationView';
 
 /**
  * 主页面page
@@ -22,6 +23,9 @@ function homePage(props: any) {
       </div>
       <div className={styles.barWrapper}>
         <SearchBar width="100%" />
+      </div>
+      <div>
+        <MinMaxLayout />
       </div>
     </div>
   );
