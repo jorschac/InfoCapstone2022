@@ -20,6 +20,9 @@ const answers = [
 ]
 
 function QAPage(props:any){
+    /***
+     * 先示范，之后要改
+     * */
     return (
         <div className={styles.cards}>
             <div className={styles.discussionTitle}>Discussion</div>
