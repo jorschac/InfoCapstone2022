@@ -12,7 +12,7 @@ export default defineConfig({
   routes: [
     { path: '/courseInfo', component: '@/layouts/index', 
       routes: [{path: '/courseInfo/detail', component: '@/pages/courseInfoPage/index'},
-               {path: '/courseInfo/QA', component: '@/pages/QAPage'}]
+               {path: '/courseInfo/QA', component: '@/pages/QAPage/QAPage.tsx'}]
     },
 
     { path: '/', component: '@/pages/index', exact:true },

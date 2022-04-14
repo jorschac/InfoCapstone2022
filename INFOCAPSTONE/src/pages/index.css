@@ -43,3 +43,10 @@
   justify-content: center;
   flex-flow: column;
 }
+
+.discussionTitle {
+  font-weight: 500;
+  align-self: start;
+  font-size: x-large;
+  padding-left: 4.5vw;
+}
