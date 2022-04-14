@@ -33,7 +33,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  transform: translateY(-200%);
+  transform: translateY(-150px);
 }
 
 .cards {
