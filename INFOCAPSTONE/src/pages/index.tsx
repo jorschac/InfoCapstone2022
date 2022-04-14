@@ -24,7 +24,7 @@ function homePage(props: any) {
       <div className={styles.barWrapper}>
         <SearchBar width="100%" />
       </div>
-      <div className={styles.barWrapper}>
+      <div className={styles.recommendationView}>
         <MinMaxLayout />
       </div>
     </div>
