@@ -4,11 +4,11 @@ import axios from 'axios';
 import styles from './index.css';
 import ThreeBubbles from './threeBubbles';
 import Diagram from './barChart';
-import { Select, Divider} from 'antd';
+import { Select, Divider } from 'antd';
 
 /**
  * courseInfo中间content部分的course rating部分
- * @param props 
+ * @param props
  */
 const RatingCard = (props: any) => {
   const { professors, courseCode, gradeMap, updateBreakdown } = props;
@@ -72,10 +72,9 @@ const RatingCard = (props: any) => {
   }
 
   return (
-
     <div className={styles.dropMenuAndContent}>
       <div className={styles.dropdown}>
-        <span style={{ fontSize: 'medium', margin: '5px' }}>
+        <span style={{ fontSize: 'large', margin: '5px', fontWeight: 'bold' }}>
           Select a Professor:{' '}
         </span>
         <Select
@@ -102,7 +101,6 @@ const RatingCard = (props: any) => {
         </div>
       </div>
     </div>
-
   );
 };
 
@@ -120,7 +118,7 @@ const actionCreator = {
       type: 'courseInfo/updateBreakdown',
       payload,
     };
-  }
+  },
 };
 
 export default connect(mapStateProps, actionCreator)(RatingCard);

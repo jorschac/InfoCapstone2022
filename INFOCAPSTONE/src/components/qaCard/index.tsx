@@ -13,9 +13,8 @@ import { Divider, Input } from 'antd';
  */
 
 function QACard(props: any) {
-  const { questionText = '服务器端数据有问题', answers = [] } =
-    props;
-  const {TextArea} = Input
+  const { questionText = '服务器端数据有问题', answers = [] } = props;
+  const { TextArea } = Input;
   let answerList: JSX.Element[] = [];
   let [inputOn, switcInutOn] = useState(false);
 
@@ -37,7 +36,7 @@ function QACard(props: any) {
             {answers[i].answered_at}
           </div>
         </div>
-      </div>
+      </div>,
     );
     if (i < answers.length - 1) {
       answerList.push(
@@ -50,7 +49,7 @@ function QACard(props: any) {
           }}
         >
           <Divider style={{ marginBottom: '0px', marginTop: '4px' }} />
-        </div>
+        </div>,
       );
     }
   }
@@ -66,23 +65,29 @@ function QACard(props: any) {
     inputBox = <div></div>;
     relpyButton = (
       <a
-        style={{ display: 'flex', alignItems: 'center',  marginTop:'4vh' }}
+        style={{ display: 'flex', alignItems: 'center', marginTop: '4vh' }}
         onClick={switchInputHandler}
       >
-        <IoChatbubbleEllipsesOutline /> <span style={{paddingLeft: '5px'}}>Reply</span>
+        <IoChatbubbleEllipsesOutline />{' '}
+        <span className={styles.answerButton}>Reply</span>
       </a>
     );
   } else {
     inputBox = (
-        <div>
-            <TextArea placeholder='share your answer here... ' showCount maxLength={200}/>
-        </div>);
+      <div>
+        <TextArea
+          placeholder="share your answer here... "
+          showCount
+          maxLength={200}
+        />
+      </div>
+    );
     relpyButton = (
       <a
-        style={{ display: 'flex', alignItems: 'center', margin:'4vh 0px 1vh' }}
+        style={{ display: 'flex', alignItems: 'center', margin: '4vh 0px 1vh' }}
         onClick={switchInputHandler}
       >
-        <IoEyeOutline /> <span style={{paddingLeft: '5px'}}>Collapse</span>
+        <IoEyeOutline /> <span className={styles.answerButton}>Collapse</span>
       </a>
     );
   }
@@ -98,7 +103,5 @@ function QACard(props: any) {
     </div>
   );
 }
-
-
 
 export default QACard;
