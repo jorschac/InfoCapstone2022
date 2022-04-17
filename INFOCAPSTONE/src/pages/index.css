@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 
 
 
@@ -29,6 +28,7 @@
   color: #2A4C6B;
   width: 27%;
   font-family: 'Roboto', sans-serif;
+  font-weight: 700;
   font-size: xxx-large;
   display: flex;
   justify-content: space-around;
@@ -42,6 +42,19 @@
   align-items: center;
   justify-content: center;
   flex-flow: column;
+}
+
+.discussion {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: x-large;
+  align-self: flex-start;
+}
+
+.qaTitle {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .discussionTitle {

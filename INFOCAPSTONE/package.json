@@ -9,6 +9,7 @@
     "test:coverage": "umi-test --coverage",
     "play": "swc playground.tsx -o playground.js && node playground.js"
   },
+  "types": "./src/components/types/types.tsx",
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
