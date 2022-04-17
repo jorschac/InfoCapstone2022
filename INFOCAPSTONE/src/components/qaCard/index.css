@@ -22,6 +22,7 @@
     font-family: 'Roboto';
     font-weight: 500;
     padding-left: 0.5vw;
+    font-size: medium;
 }
 
 .singleAnswer {
@@ -34,10 +35,15 @@
     padding-left: 0.5vw;
     font-family: 'Roboto';
     flex-basis: 50vw;
-
+    font-size: medium;
 }
 
 .boldText {
     font-family: 'Roboto';
     font-weight: 500;
+}
+
+.answerButton {
+    padding-left: '5px';
+    font-size: large;
 }
