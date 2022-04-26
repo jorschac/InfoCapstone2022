@@ -6,6 +6,7 @@ interface QAClientInterface {
   submit: (submitType: string, payload: object, url: string) => void;
 }
 
+
 /**
  * 负责QA页面数据交互的抽象类，包含：
  *

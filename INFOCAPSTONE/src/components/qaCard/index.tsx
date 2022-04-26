@@ -106,12 +106,6 @@ function QACard(props: any) {
          {answerText? 
            <Button type="default" shape="round" size="small"
            onClick={() => {
-            // console.log(
-            //   {
-            //     id: id,
-            //     text: answerText,
-            //   }
-            // )
              qa.submit('addAnswer', {
               id: id,
               text: answerText,

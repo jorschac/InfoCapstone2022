@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './index.css';
 import SearchBar from '../components/searchBar';
+import Recommandation from '@/components/recommandation'
 
 /**
  * 主页面page
@@ -16,12 +17,15 @@ function homePage(props: any) {
           width="42px"
           height="42px"
         />
-        <p style={{ margin: 0, color: '#1890FF', fontSize: '32pt' }}>
+        <p style={{ margin: 0, color: '#1890FF', fontSize: '38pt' }}>
           Course Expert
         </p>
       </div>
       <div className={styles.barWrapper}>
         <SearchBar width="100%" />
+      </div>
+      <div className={styles.recommandation}>
+        <Recommandation />
       </div>
     </div>
   );

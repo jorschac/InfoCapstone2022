@@ -12,7 +12,8 @@
     "strict": true,
     "paths": {
       "@/*": ["src/*"],
-      "@@/*": ["src/.umi/*"]
+      "@@/*": ["src/.umi/*"],
+      "*": ["src/types/*.d.ts"]
     },
     "allowSyntheticDefaultImports": true
   },

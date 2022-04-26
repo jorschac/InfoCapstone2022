@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.cardsContainer {
+    width: 86vw;
+    display: flex;
+    overflow-x: auto;
+    padding: 12px;
+
+}
+
+@keyframes outBlur {
+    from {box-shadow: 1px 1.1px 2px 2px rgb(155, 155, 155);}
+    to {box-shadow: 4px 4px 5px 5px rgb(155, 155, 155);}
+}
+
+.singleCard{
+    width: 15vw;
+    height: 15vh;
+     box-shadow: 1px 1.1px 2px 2px rgb(155, 155, 155);
+    border-radius: 14px; 
+    margin: 2px 9px;
+    padding: 2vh;
+    padding-bottom: 1vh;
+}
+
+.singleCard:hover {
+    cursor: pointer;
+    animation-name: outBlur;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+.textContent {
+    width: 8vw;
+    margin: 11px 15px 2px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: medium;
+}
+
+.breifInfo {
+    width: 8vw;
+    margin: 3px 15px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    color: #646479;
+    font-size: smaller;
+}
+
+.rolsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.subTitle {
+    font-size: x-large;
+}
+
+.rolInRols{
+    margin: 1vh 0.5vw 6vh;
+}
