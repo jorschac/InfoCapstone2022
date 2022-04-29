@@ -32,7 +32,7 @@ function Recommandation(props: any) {
         defaultActiveKey="1"
         size="large"
         tabBarGutter={50}
-        tabBarStyle={{ marginBottom: '4vw' }}
+        tabBarStyle={{ marginBottom: '2vw' }}
       >
         <TabPane tab="Gpa Booster" key="1">
           <Rol courses={content.gpa_booster} />

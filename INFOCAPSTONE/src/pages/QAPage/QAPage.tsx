@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 import { history } from 'umi';
 import styles from '@/pages/index.css';
 import axios from 'axios';
-import { Button, Modal, Form, Input } from 'antd';
+import { Button, Modal, Form, Input, Spin } from 'antd';
+import { LoadingOutlined } from '@ant-design/icons';
 import { connect } from 'dva';
 
 import QACard from '@/components/qaCard';
@@ -18,7 +19,7 @@ function QAPage(props: any) {
   const { courseCode } = props;
   const { TextArea } = Input;
   let [state, setRender] = useState(
-    new Array<JSX.Element>(<div>后端会返回预设的五个问题，但现在好像John还没排序好</div>),
+    new Array<JSX.Element>(<Spin indicator={<LoadingOutlined style={{ fontSize: 24 }} spin />}/>),
   );
   let [showModal, setShowModal] = useState(false);
   const [confirmLoading, setConfirmLoading] = useState(false);

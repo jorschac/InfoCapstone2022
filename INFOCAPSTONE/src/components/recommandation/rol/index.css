@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 .cardsContainer {
-    width: 86vw;
+    width: 66vw;
     display: flex;
     overflow-x: auto;
     padding: 12px;
@@ -54,6 +54,7 @@
 
 .subTitle {
     font-size: x-large;
+    text-transform: capitalize;
 }
 
 .rolInRols{

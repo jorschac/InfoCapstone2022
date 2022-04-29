@@ -28,7 +28,7 @@
 .singleAnswer {
     display: flex;
     flex-direction: row;
-    padding-top: 1vh;
+    padding-top: 0.7vh;
 }
 
 .singleAnswerText {

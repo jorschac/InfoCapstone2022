@@ -84,7 +84,7 @@ function QACard(props: any) {
     inputBox = <div></div>;
     relpyButton = (
       <a
-        style={{ display: 'flex', alignItems: 'center', marginTop: '4vh' }}
+        style={{ display: 'flex', alignItems: 'center', marginTop: '2vh' }}
         onClick={switchInputHandler}
       >
         <IoChatbubbleEllipsesOutline />{' '}
@@ -132,7 +132,7 @@ function QACard(props: any) {
     );
     relpyButton = (
       <a
-        style={{ display: 'flex', alignItems: 'center', margin: '4vh 0px 1vh' }}
+        style={{ display: 'flex', alignItems: 'center', margin: '2vh 0px 1vh' }}
         onClick={switchInputHandler}
       >
         <IoEyeOutline /> <span style={{ paddingLeft: '5px' }}>Collapse</span>
@@ -145,7 +145,7 @@ function QACard(props: any) {
       <div className={styles.container}>
         <span className={styles.boldText}>Q:</span>
         <span className={styles.questionText}>{questionText}</span>
-        <Divider style={{ marginTop: '4px' }} />
+        <Divider style={{ margin: '0.7vh auto 0.7vh'}} />
         {answerList}
         {relpyButton}
         {inputBox}
@@ -156,7 +156,7 @@ function QACard(props: any) {
       <div className={styles.container}>
         <span className={styles.boldText}>Q:</span>
         <span className={styles.questionText}>{questionText}</span>
-        <Divider style={{ marginTop: '4px' }} />
+        <Divider style={{margin: '0.7vh auto 0.7vh'}} />
         <div style={{ width: '14vw', margin: '4vh auto' }}>
           <Button
             type="primary"
