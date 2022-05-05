@@ -7,14 +7,14 @@
   width: 100%;
   height: 100%;
   bottom: 0;
-  left: -2vw;
   right: 0;
-  margin: -20vh auto;
+  padding-top: 20vh;
   display: flex;
   align-items: center;
   justify-content: start;
   flex-flow: column;
-  background-color: #F0F2F5;
+  background: rgb(255,150,214);
+  background: linear-gradient(45deg, rgba(255,150,214,1) 0%, rgba(20,4,88,1) 100%);
 }
 
 .barWrapper {
