@@ -10,15 +10,16 @@
 }
 
 @keyframes outBlur {
-    from {box-shadow: 1px 1.1px 2px 2px rgb(155, 155, 155);}
-    to {box-shadow: 4px 4px 5px 5px rgb(155, 155, 155);}
+    from {box-shadow: 1px 7px 14px 7px rgba(253, 253, 253, 0.4);}
+    to {box-shadow: 5px 10px 10px 7px rgba(253, 253, 253, 0.4);}
 }
 
 .singleCard{
     position: relative;
+    background-color: white;
     width: 14.5vw;
     height: 15vh;
-     box-shadow: 1px 1.1px 2px 2px rgb(155, 155, 155);
+    box-shadow: 1px 7px 14px 7px rgba(253, 253, 253, 0.4);
     border-radius: 14px; 
     margin: 2px 9px;
     padding: 2vh;
@@ -33,6 +34,7 @@
 }
 
 .textContent {
+    color:rgb(255,255,255,0.9);
     width: 8vw;
     margin: 11px 15px 2px;
     font-family: 'Roboto';
@@ -56,7 +58,7 @@
     margin: 3px 15px 9px;
     font-family: 'Roboto';
     font-weight: 400;
-    color: #646479;
+    color: rgb(235, 235, 245, 0.6);
     font-size: smaller;
 }
 

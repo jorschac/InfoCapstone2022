@@ -12,8 +12,10 @@
 
 .cardsContainer {
     background-color: white;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
+    border-radius: 14px;
+    box-shadow: 1px 7px 30px 15px rgba(253, 253, 253, 0.4)
 }
 
 body {

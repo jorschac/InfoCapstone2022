@@ -1,0 +1,26 @@
+{
+  "name": "infocapstone2022",
+  "version": "1.0.0",
+  "description": "We are a team of 4 UW Informatics students passionate about improving the usefulness of education information. We are currently working on a capstone project that collects, processes, and presents informative course information so that students can have a better idea before signing up for a class. We use this repo to host the project code and technical documentation. Currently, we are still in the early stage of the project. Stay tuned for upcoming development!",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorschac/InfoCapstone2022.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jorschac/InfoCapstone2022/issues"
+  },
+  "homepage": "https://github.com/jorschac/InfoCapstone2022#readme",
+  "dependencies": {
+    "react-scripts": "^5.0.1"
+  }
+}

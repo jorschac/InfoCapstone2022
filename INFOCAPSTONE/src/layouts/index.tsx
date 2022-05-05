@@ -68,7 +68,9 @@ function headArea(props: any) {
   };
 
   return (
-    <div style={{ backgroundColor: '#F0F2F5'}}>
+    // <div style={{ background: 'linear-gradient(#e66465, #9198e5)'}}>
+      <div style={{ background: 'linear-gradient(45deg, rgba(255,150,214,1) 0%, rgba(20,4,88,1) 100%)'}}>
+
       <div className={styles.headArea}>
         <NavBar/>
         <Divider style={{ marginBottom: '-2px', marginTop: '12px'}} />

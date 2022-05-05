@@ -12,7 +12,7 @@ const NavBar = (props:any) => {
     }
     return (
         <div className={styles.navBarWrapper}>
-            <h3 className={styles.title}><a style={{color: '#755ebf'}} onClick={click}>Course Expert</a></h3>
+            <h3 className={styles.title}><a style={{color: '#755ebf', fontSize: '20px' }} onClick={click}>Course Expert</a></h3>
             <div style={{margin: '1.5vh 0 0'}}>
                 <SearchBar width={'35vw'} size={'default'}/>
             </div>        

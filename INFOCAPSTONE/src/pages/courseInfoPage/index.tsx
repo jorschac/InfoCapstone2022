@@ -8,11 +8,13 @@ import {Divider} from 'antd'
 
 function CourseInfoPage(props:any){
     return (
+        // <div className={styles.contentWrapper}>
         <div className={styles.cards}>
             <RatingCard/>
             <Divider/>
             <BreakDown/>
         </div>
+        // </div>
     );
 }
 
