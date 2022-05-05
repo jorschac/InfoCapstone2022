@@ -88,7 +88,7 @@ function headArea(props: any) {
           selectedKeys={[currentKey]}
           style={{ paddingLeft: '10px' }}
         >
-          <Menu.Item key="detail">Course Overview</Menu.Item>
+          <Menu.Item key="detail">sOverview</Menu.Item>
           <Menu.Item key="QA">Discussion</Menu.Item>
         </Menu>
       </div>
