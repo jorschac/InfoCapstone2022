@@ -26,6 +26,7 @@ function QACard(props: any) {
   let answerList: JSX.Element[] = [];
   let [inputOn, switcInutOn] = useState(false);
   let [answerText, setAnswerText] = useState('');
+  let [answerLength, setAnswerLength] = useState(0);
   let qa = new QAClient(
     'https://capstone2022-342303.uw.r.appspot.com/course/qa/list',
     'https://capstone2022-342303.uw.r.appspot.com/course/answer/add',
@@ -92,18 +93,37 @@ function QACard(props: any) {
       </a>
     );
   } else {
+    let format = (cnt:any) => {
+      return `${answerLength}/200 words`
+    }
     inputBox = (
       <div>
-        <TextArea
+        {
+         answerLength<=200?
+          <TextArea
           placeholder="share your answer here... "
-          showCount
-          maxLength={200}
+          showCount={{formatter: format}}
+          value={answerText}
+          rows = {4}
           onChange={(e) => {
             setAnswerText(e.target.value);
+            setAnswerLength(e.target.value.split(' ').length)
           }}
-        />
+          /> : 
+          <TextArea
+          placeholder="share your answer here... "
+          showCount={{formatter: format}}
+          value={answerText}
+          rows = {4}
+          style = {{border: '2.5px solid #ef0000'}}
+          onChange={(e) => {
+            setAnswerText(e.target.value);
+            setAnswerLength(e.target.value.split(' ').length)
+          }}
+          />
+        }
         <div style={{marginTop: '1vh'}}>
-         {answerText? 
+         {answerText && answerLength<=200? 
            <Button type="default" shape="round" size="small"
            onClick={() => {
              qa.submit('addAnswer', {
@@ -112,6 +132,7 @@ function QACard(props: any) {
             }).then( res => {
               handleRenderContent(res)
               setAnswerText('')
+              setAnswerLength(0)
             }
             ). catch(
               err => {

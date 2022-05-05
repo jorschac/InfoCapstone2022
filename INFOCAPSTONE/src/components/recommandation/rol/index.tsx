@@ -24,14 +24,16 @@ function Rol(props: any) {
   let cards;
 
   if (courses instanceof Array) {
-    cards = courses.map((name: string) => {
+    cards = courses.map((payload: any) => {
+      let breifInfo = payload['tags'].length? payload.tags.join(', ') + ' | ' : ''
+      breifInfo += payload['credit']+ ' CRs'
       return (
         <div>
-          <div className={styles.singleCard} key-data={name} onClick={redirectHandler}>
-            <div className={styles.textContent}>{}</div>
+          <div className={styles.singleCard} key-data={payload['course_code']} onClick={redirectHandler}>
+            <div className={styles.fillContent}>{payload['course_code']}</div>
           </div>
-          <p className={styles.textContent}>{name}</p>
-          <p className={styles.breifInfo}>NW, QSR | 4 CRs</p>
+          <p className={styles.textContent}>{payload['course_code']}</p>
+      <p className={styles.breifInfo}>{breifInfo}</p>
         </div>
       );
     });
@@ -40,14 +42,16 @@ function Rol(props: any) {
     let cardsWithTitle = [];
     let keys = _.keys(courses);
     for (let key of keys) {
-      let subcards = courses[key].map((name: string) => {
+      let subcards = courses[key].map((payload: any) => {
+        let breifInfo = payload['tags'].length? payload.tags.join(', ') + ' | ' : ''
+        breifInfo += payload['credit']+ ' CRs'
         return (
-          <div>
-            <div className={styles.singleCard} key-data={name} onClick={redirectHandler}>
-              <div className={styles.textContent}>{}</div>
+          <div style={{marginBottom: '9px'}}>
+            <div className={styles.singleCard} key-data={payload['course_code']} onClick={redirectHandler}>
+              <div className={styles.fillContent}>{payload['course_code']}</div>
             </div>
-            <p className={styles.textContent}>{name}</p>
-            <p className={styles.breifInfo}>NW, QSR | 4 CRs</p>
+            <p className={styles.textContent}>{payload['course_code']}</p>
+            <p className={styles.breifInfo}>{breifInfo}</p>
           </div>
         );
       });

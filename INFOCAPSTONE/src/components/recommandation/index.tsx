@@ -34,7 +34,7 @@ function Recommandation(props: any) {
         tabBarGutter={50}
         tabBarStyle={{ marginBottom: '2vw' }}
       >
-        <TabPane tab="Gpa Booster" key="1">
+        <TabPane tab="GPA Booster" key="1">
           <Rol courses={content.gpa_booster} />
         </TabPane>
         <TabPane tab="Popular Courses" key="2">

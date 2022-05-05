@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 .cardsContainer {
-    width: 66vw;
+    width: 64.8vw;
     display: flex;
-    overflow-x: auto;
+    flex-wrap: wrap;
     padding: 12px;
+    margin-bottom: 3px;
 
 }
 
@@ -14,7 +15,8 @@
 }
 
 .singleCard{
-    width: 15vw;
+    position: relative;
+    width: 14.5vw;
     height: 15vh;
      box-shadow: 1px 1.1px 2px 2px rgb(155, 155, 155);
     border-radius: 14px; 
@@ -38,9 +40,20 @@
     font-size: medium;
 }
 
+.fillContent {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Roboto';
+    font-weight: 500;
+    color: #a78cf2;
+    font-size: 1.35em;
+}
+
 .breifInfo {
-    width: 8vw;
-    margin: 3px 15px;
+    width: 9vw;
+    margin: 3px 15px 9px;
     font-family: 'Roboto';
     font-weight: 400;
     color: #646479;

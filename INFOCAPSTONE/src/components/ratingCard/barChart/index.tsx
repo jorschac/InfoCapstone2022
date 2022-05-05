@@ -17,13 +17,27 @@ import _ from 'lodash';
  */
 const Diagram = (props: any) => {
   const { gradeMap, distribution } = props;
-  const dataSet = _.map(distribution, (key, val) => {
+  let total = 0
+  _.map(distribution, (key, val) => {
     //console.log(gradeMap, val)
+    total += key
+    //console.log('total cnt added... ', key, ' on ', total)
     return {
       name: gradeMap[val][0],
       percentage: key,
       orgin: val,
       topLabel: `${key}%`,
+    };
+  });
+
+  const dataSet = _.map(distribution, (key, val) => {
+    //console.log(gradeMap, val)
+    //console.log('total is ... ', total, ' key is ', key, ' per is ', Math.round((key/total) * 100))
+    return {
+      name: gradeMap[val][0],
+      percentage: Math.round((key/total) * 100),
+      orgin: val,
+      topLabel: `${Math.round((key/total) * 100)}%`,
     };
   });
 
