@@ -6,6 +6,8 @@ import { connect } from 'dva';
 import NavBar from '@/components/navBar'
 import axios from 'axios';
 import { Tag, Divider, Menu } from 'antd';
+import NavBar from '../components/navBar' 
+
 
 
 /**
@@ -72,9 +74,18 @@ function headArea(props: any) {
       <div style={{ background: 'linear-gradient(45deg, rgba(255,150,214,1) 0%, rgba(20,4,88,1) 100%)'}}>
 
       <div className={styles.headArea}>
+<<<<<<< HEAD
         <NavBar/>
         <Divider style={{ marginBottom: '-2px', marginTop: '12px'}} />
         <h3 style={{ display: 'inline-block', padding: '30px 30px 0px' }}>
+=======
+        <div>
+        </div>
+        <NavBar style={{marginTop: '10%'}}/>
+        <Divider style={{marginBottom: '-15px'}} />
+
+        <h3 style={{ display: 'inline-block', padding: '50px 30px 0px' }}>
+>>>>>>> 01a4cabf00514624323cb2f9f1c3fd440ad84575
           {state.course_code} {state.course_title} (
           {state.credit == '' ? 'Na' : state.credit})
         </h3>
