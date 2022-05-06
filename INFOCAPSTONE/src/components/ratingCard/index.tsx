@@ -74,8 +74,8 @@ const RatingCard = (props: any) => {
   return (
     <div className={styles.dropMenuAndContent}>
       <div className={styles.dropdown}>
-        <span style={{ fontSize: 'large', margin: '5px', fontWeight: 'bold' }}>
-          Select a Professor:{' '}
+        <span style={{ fontSize: '22px',  fontWeight: '500'}}>
+          Select a Professor {' '}
         </span>
         <Select
           defaultValue={currentProfessor}

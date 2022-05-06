@@ -101,7 +101,7 @@ function QACard(props: any) {
         {
          answerLength<=200?
           <TextArea
-          placeholder="share your answer here... "
+          placeholder="Share your answer here... "
           showCount={{formatter: format}}
           value={answerText}
           rows = {4}
@@ -111,7 +111,7 @@ function QACard(props: any) {
           }}
           /> : 
           <TextArea
-          placeholder="share your answer here... "
+          placeholder="Share your answer here... "
           showCount={{formatter: format}}
           value={answerText}
           rows = {4}
@@ -181,7 +181,7 @@ function QACard(props: any) {
         <div style={{ width: '14vw', margin: '4vh auto' }}>
           <Button
             type="primary"
-            shape="default"
+            shape="round"
             size="large"
             onClick={switchInputHandler}
           >

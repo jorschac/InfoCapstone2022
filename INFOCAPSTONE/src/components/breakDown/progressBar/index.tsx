@@ -12,16 +12,17 @@ const ProgressBar = (props: any) => {
   return (
     <div className={styles.barContainer}>
       <p
-        style={{ margin: '0 1vw 0', fontSize: 'medium', width: '30vw' }}
+        style={{ margin: '0 3vw 0', color: 'rgb(89, 88, 87)', fontSize: 'medium', width: '40vw' }}
       >{`${text}: `}</p>
       <Progress
         type="line"
         strokeWidth={size}
+        // style = {{margin:"0px"}}
         percent={calculate(value)}
         showInfo={false}
         strokeColor="#755ebf"
       />
-      <p style={{ margin: '0 1vw 0', fontSize: 'xx-small', fontWeight: 'lighter' }}>{`${value}/5`}</p>
+      <p style={{ margin: '0 10px 0', fontSize: 'xx-small', fontWeight: 'lighter' }}>{`${value}/5`}</p>
     </div>
   );
 };

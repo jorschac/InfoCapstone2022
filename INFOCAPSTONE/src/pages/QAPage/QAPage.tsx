@@ -63,8 +63,9 @@ function QAPage(props: any) {
   return (
     <div className={styles.cards}>
       <div className={styles.qaTitle}>
-        <div className={styles.discussion}>Discussion</div>
-        <Button type="primary" shape="round" size="large" onClick={handleOpen}>
+        <div className={styles.discussion }>Discussion</div>
+       
+        <Button style={{background: '#6245c4', marginRight:'5%'}} type="primary" shape="round" size="large" onClick={handleOpen}>
           Add a question
         </Button>
         <Modal

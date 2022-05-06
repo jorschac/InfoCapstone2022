@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
 .container {
-    box-shadow: 1px 1.1px 2px 2px rgb(155, 155, 155);
+    box-shadow: 0.6px 0.6px 2px 1px rgb(209, 207, 207);
     border-radius: 14px;
     padding: inherit;
     padding-bottom: 1vh;
@@ -11,7 +11,8 @@
 
 .singleAnswerTime {
     color: gray;
-    flex-basis: 13vw;
+    /* flex-basis: 13vw; */
+        
 }
 
 .inputBox {
@@ -36,6 +37,7 @@
     font-family: 'Roboto';
     flex-basis: 50vw;
     font-size: medium;
+    color:#575555;
 }
 
 .boldText {
