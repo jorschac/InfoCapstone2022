@@ -89,6 +89,7 @@ function QAPage(props: any) {
           onOk={() => {
             setConfirmLoading(true);
             form.validateFields().then((value) => {
+              console.log(value, 'hahahhaha')
               qa.submit('addQuestion', {
                 text: value.questionText,
               })
@@ -105,7 +106,7 @@ function QAPage(props: any) {
         >
           <Form form={form}>
             <Form.Item style={{ height: '10vh' }} name="questionText">
-              {answerLength <= 50 ? new Array<JSX.Element>(
+              {answerLength <= 50 ? (
                 <TextArea
                   placeholder="Describe your question, end with a question mark"
                   size="large"

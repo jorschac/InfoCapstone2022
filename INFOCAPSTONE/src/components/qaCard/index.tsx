@@ -186,7 +186,7 @@ function QACard(props: any) {
         <div style={{ width: '14vw', margin: '4vh auto' }}>
           <Button
             type="primary"
-            shape="default"
+            shape="round"
             size="large"
             onClick={switchInputHandler}
           >
