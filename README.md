@@ -6,7 +6,7 @@
     Product Manager: <a href='https://www.linkedin.com/in/sinanzhao/'>Ciel Zhao</a>
   </li>
   <li>
-    Back-end Developer: <a href=''>John Wang</a>
+    Back-end Developer: <a href='www.linkedin.com/in/jinghua-wang'>John Wang</a>
   </li>
   <li>
     UI/Data Mining: <a href='https://www.linkedin.com/in/wendellli99/'>Wendell Li</a>
