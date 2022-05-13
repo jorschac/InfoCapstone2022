@@ -1,15 +1,15 @@
 # Info Capstone 2022
 
-<h2>Presented by 4 talented UW Information school students: </h2>
+<h3>Presented by 4 talented UW Information school students: </h3>
 <ul>
   <li>
-    Product Manager: Ciel Zhao
+    Product Manager: <a href='https://www.linkedin.com/in/sinanzhao/'>Ciel Zhao</a>
   </li>
   <li>
-    Back-end Developer: John Wang
+    Back-end Developer: <a href=''>John Wang</a>
   </li>
   <li>
-    UI/Data Mining: Wendell Li
+    UI/Data Mining: <a href='https://www.linkedin.com/in/wendellli99/'>Wendell Li</a>
   </li>
   <li>
     Front-end Developer: <a href='https://www.linkedin.com/in/han-zhao-8b058217a/'>Han</a>
