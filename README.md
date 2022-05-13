@@ -1,6 +1,6 @@
 # Info Capstone 2022
 
-<h3>Presented by 4 talented UW Information school students: </h3>
+<h3>Presented by 4 talented UW Information school students(and their Linkedins): </h3>
 <ul>
   <li>
     Product Manager: <a href='https://www.linkedin.com/in/sinanzhao/'>Ciel Zhao</a>
