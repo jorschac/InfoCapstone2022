@@ -12,7 +12,7 @@
     UI/Data Mining: Wendell Li
   </li>
   <li>
-    Front-end Developer: [Han](https://www.linkedin.com/in/han-zhao-8b058217a/)
+    Front-end Developer: <a href='https://www.linkedin.com/in/han-zhao-8b058217a/'>Han</a>
   </li>
 </ul>
 
