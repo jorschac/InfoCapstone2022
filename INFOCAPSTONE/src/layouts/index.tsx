@@ -24,7 +24,6 @@ function headArea(props: any) {
   const [state, setState] = useState(initialState);
   const [currentKey, setCurrentKey] = useState('detail');
   useEffect(()=>{
-    console.log('rerender..')
     //判断当前的路径是否合法，若不合法，则跳回home界面
     if (['/courseInfo/detail'].includes(history.location.pathname) && !history.location.query.code) {
       history.push('/');
@@ -68,31 +67,38 @@ function headArea(props: any) {
   };
 
   return (
-    <div style={{ backgroundColor: '#F0F2F5'}}>
+    <div className={styles.backGroundPage}>
+      <div className={styles.navWrapper}>
+        <NavBar setTab={setCurrentKey}/>
+      </div>
       <div className={styles.headArea}>
-        <NavBar/>
-        <Divider style={{ marginBottom: '-2px', marginTop: '12px'}} />
-        <h3 style={{ display: 'inline-block', padding: '30px 30px 0px' }}>
+        {/* <Divider style={{ marginBottom: '-2px', marginTop: '12px'}} /> */}
+        <h2 style={{ display: 'inline-block', padding: '30px 30px 0px' }}>
           {state.course_code} {state.course_title} (
           {state.credit == '' ? 'Na' : state.credit})
-        </h3>
+        </h2>
+        <div style={{padding: '0 30px 15px'}}>
         {tags}
-        <div style={{ width: '60%' }}>
+        </div>
+        <div style={{ width: '70%', marginBottom: '3vh' }}>
           <p className={styles.courseDescribtion}>{state.description}</p>
         </div>
+        <div style={{borderRadius: '14px'}}>
         <Menu
           onClick={clickHandler}
           mode="horizontal"
           selectedKeys={[currentKey]}
-          style={{ paddingLeft: '10px' }}
+          style={{ paddingLeft: '10px', borderRadius: '14px' }}
         >
           <Menu.Item key="detail">Course Overview</Menu.Item>
           <Menu.Item key="QA">Discussion</Menu.Item>
         </Menu>
+        </div>
       </div>
       <div className={styles.cardsContainer}>
         {props.children}
       </div>
+      <div style={{height: '2vh'}}></div>
     </div>
   );
 }

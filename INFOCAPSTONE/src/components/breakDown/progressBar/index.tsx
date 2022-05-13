@@ -12,8 +12,8 @@ const ProgressBar = (props: any) => {
   return (
     <div className={styles.barContainer}>
       <p
-        style={{ margin: '0 1vw 0', fontSize: 'medium', width: '30vw' }}
-      >{`${text}: `}</p>
+        style={{ margin: '0 0.5vw 0', fontSize: 'small', width: '30vw' }}
+      >{`${text}`}</p>
       <Progress
         type="line"
         strokeWidth={size}

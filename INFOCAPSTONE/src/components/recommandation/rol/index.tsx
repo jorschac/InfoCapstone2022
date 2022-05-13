@@ -18,6 +18,7 @@ function Rol(props: any) {
 
   let redirectHandler = (e: any) => {
     let courseCode = e.target.getAttribute('key-data');
+    console.log(e.target, '跳转去： ', courseCode)
     history.push('/courseInfo/detail?code=' + courseCode);
   };
 

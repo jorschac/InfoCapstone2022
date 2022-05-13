@@ -11,7 +11,7 @@
 
 .singleAnswerTime {
     color: gray;
-    flex-basis: 13vw;
+    flex-basis: 7vw;
 }
 
 .inputBox {
@@ -34,7 +34,7 @@
 .singleAnswerText {
     padding-left: 0.5vw;
     font-family: 'Roboto';
-    flex-basis: 50vw;
+    flex-basis: 51vw;
     font-size: medium;
 }
 

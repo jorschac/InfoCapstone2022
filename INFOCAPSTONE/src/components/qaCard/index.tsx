@@ -93,61 +93,66 @@ function QACard(props: any) {
       </a>
     );
   } else {
-    let format = (cnt:any) => {
-      return `${answerLength}/200 words`
-    }
+    let format = (cnt: any) => {
+      return `${answerLength}/200 words`;
+    };
     inputBox = (
       <div>
-        {
-         answerLength<=200?
+        {answerLength <= 200 ? (
           <TextArea
-          placeholder="share your answer here... "
-          showCount={{formatter: format}}
-          value={answerText}
-          rows = {4}
-          onChange={(e) => {
-            setAnswerText(e.target.value);
-            setAnswerLength(e.target.value.split(' ').length)
-          }}
-          /> : 
-          <TextArea
-          placeholder="share your answer here... "
-          showCount={{formatter: format}}
-          value={answerText}
-          rows = {4}
-          style = {{border: '2.5px solid #ef0000'}}
-          onChange={(e) => {
-            setAnswerText(e.target.value);
-            setAnswerLength(e.target.value.split(' ').length)
-          }}
+            placeholder="share your answer here... "
+            showCount={{ formatter: format }}
+            value={answerText}
+            rows={4}
+            onChange={(e) => {
+              setAnswerText(e.target.value);
+              setAnswerLength(e.target.value.split(' ').length);
+            }}
           />
-        }
-        <div style={{marginTop: '1vh'}}>
-         {answerText && answerLength<=200? 
-           <Button type="default" shape="round" size="small"
-           onClick={() => {
-             qa.submit('addAnswer', {
-              id: id,
-              text: answerText,
-            }).then( res => {
-              handleRenderContent(res)
-              setAnswerText('')
-              setAnswerLength(0)
-            }
-            ). catch(
-              err => {
-                console.log(err)
-              }
-            )
-           }}
-          >
-            Submit
-          </Button>
-          :
-          <Button type="default" shape="round" size="small" disabled={true}>
-           Submit
-         </Button>
-         }
+        ) : (
+          <div>
+            <TextArea
+              placeholder="share your answer here... "
+              showCount={{ formatter: format }}
+              value={answerText}
+              rows={4}
+              style={{ border: '2.5px solid #ef0000' }}
+              onChange={(e) => {
+                setAnswerText(e.target.value);
+                setAnswerLength(e.target.value.split(' ').length);
+              }}
+            />
+            <div style={{color: 'red'}}>200 words maximum</div>
+          </div>
+        )}
+        <div style={{ marginTop: '1vh' }}>
+          {answerText && answerLength <= 200 ? (
+            <Button
+              type="default"
+              shape="round"
+              size="small"
+              onClick={() => {
+                qa.submit('addAnswer', {
+                  id: id,
+                  text: answerText,
+                })
+                  .then((res) => {
+                    handleRenderContent(res);
+                    setAnswerText('');
+                    setAnswerLength(0);
+                  })
+                  .catch((err) => {
+                    console.log(err);
+                  });
+              }}
+            >
+              Submit
+            </Button>
+          ) : (
+            <Button type="default" shape="round" size="small" disabled={true}>
+              Submit
+            </Button>
+          )}
         </div>
       </div>
     );
@@ -166,7 +171,7 @@ function QACard(props: any) {
       <div className={styles.container}>
         <span className={styles.boldText}>Q:</span>
         <span className={styles.questionText}>{questionText}</span>
-        <Divider style={{ margin: '0.7vh auto 0.7vh'}} />
+        <Divider style={{ margin: '0.7vh auto 0.7vh' }} />
         {answerList}
         {relpyButton}
         {inputBox}
@@ -177,7 +182,7 @@ function QACard(props: any) {
       <div className={styles.container}>
         <span className={styles.boldText}>Q:</span>
         <span className={styles.questionText}>{questionText}</span>
-        <Divider style={{margin: '0.7vh auto 0.7vh'}} />
+        <Divider style={{ margin: '0.7vh auto 0.7vh' }} />
         <div style={{ width: '14vw', margin: '4vh auto' }}>
           <Button
             type="primary"

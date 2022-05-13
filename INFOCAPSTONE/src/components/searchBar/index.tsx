@@ -8,7 +8,7 @@ import axios from 'axios';
 const { Search } = Input;
 
 function SearchBar(props: any) {
-  const { courseList, width, update, size='large' ,courseMap, updateCourseMap, updateCourseCode} = props;
+  const { courseList, width, update, size='large' ,courseMap, updateCourseMap, updateCourseCode, setTab} = props;
   //const [codeMp, setcodeMp] = useState(new Map());
   function searchHandler(val: string) {
     axios
@@ -32,6 +32,7 @@ function SearchBar(props: any) {
   function redirect(val: string, obj?: Object): void {
     updateCourseCode(courseMap.get(val))
     history.push('/courseInfo/detail?code=' + courseMap.get(val));
+    setTab('detail')
   }
 
   return (

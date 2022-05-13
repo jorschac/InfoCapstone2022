@@ -19,8 +19,12 @@ function QAPage(props: any) {
   const { courseCode } = props;
   const { TextArea } = Input;
   let [state, setRender] = useState(
-    new Array<JSX.Element>(<Spin indicator={<LoadingOutlined style={{ fontSize: 24 }} spin />}/>),
+    new Array<JSX.Element>(
+      <Spin indicator={<LoadingOutlined style={{ fontSize: 24 }} spin />} />,
+    ),
   );
+  let [answerText, setAnswerText] = useState('');
+  let [answerLength, setAnswerLength] = useState(0);
   let [showModal, setShowModal] = useState(false);
   const [confirmLoading, setConfirmLoading] = useState(false);
   const [form] = Form.useForm();
@@ -42,11 +46,21 @@ function QAPage(props: any) {
     if (qaListResponse) {
       let renderContent = qaListResponse.data.data.map((x: any) => {
         return (
-          <QACard questionText={x['question_text']} answers={x['answers']} id={x['question_id'] } handleRenderContent={handleRenderContent} setRender={setRender}/>
+          <QACard
+            questionText={x['question_text']}
+            answers={x['answers']}
+            id={x['question_id']}
+            handleRenderContent={handleRenderContent}
+            setRender={setRender}
+          />
         );
       });
       setRender(renderContent);
     }
+  };
+
+  let format = (cnt: any) => {
+    return `${answerLength}/50 words`;
   };
 
   useEffect(() => {
@@ -73,32 +87,50 @@ function QAPage(props: any) {
           confirmLoading={confirmLoading}
           onCancel={handleCancel}
           onOk={() => {
-            setConfirmLoading(true)
+            setConfirmLoading(true);
             form.validateFields().then((value) => {
               qa.submit('addQuestion', {
                 text: value.questionText,
               })
-                .then(res => {
-                  handleRenderContent(res)
+                .then((res) => {
+                  handleRenderContent(res);
                   setConfirmLoading(false);
                   setShowModal(false);
                 })
-                .catch(
-                  err => {
-                    console.log('post请求出错， 在QAPage.tsx那个文件里')
-                  }
-                );
+                .catch((err) => {
+                  console.log('post请求出错， 在QAPage.tsx那个文件里');
+                });
             });
           }}
         >
           <Form form={form}>
-            <Form.Item style={{ height: '5vh' }} name="questionText">
-              <TextArea
-                placeholder="Describe your question, end with a question mark"
-                size="large"
-                showCount
-                maxLength={50}
-              />
+            <Form.Item style={{ height: '10vh' }} name="questionText">
+              {answerLength <= 50 ? new Array<JSX.Element>(
+                <TextArea
+                  placeholder="Describe your question, end with a question mark"
+                  size="large"
+                  showCount={{ formatter: format }}
+                  onChange={(e) => {
+                    setAnswerText(e.target.value);
+                    setAnswerLength(e.target.value.split(' ').length);
+                  }}
+                />
+              ) : new Array<JSX.Element>(
+                <div>
+                  <TextArea
+                    placeholder="Describe your question, end with a question mark"
+                    showCount={{ formatter: format }}
+                    value={answerText}
+                    rows={4}
+                    style={{ border: '2.5px solid #ef0000' }}
+                    onChange={(e) => {
+                      setAnswerText(e.target.value);
+                      setAnswerLength(e.target.value.split(' ').length);
+                    }}
+                  />
+                  <div style={{ color: 'red' }}>50 words maximum</div>
+                </div>
+              )}
             </Form.Item>
           </Form>
         </Modal>

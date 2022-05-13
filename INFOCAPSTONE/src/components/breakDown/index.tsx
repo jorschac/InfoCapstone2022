@@ -9,22 +9,22 @@ const BreakDown = (props: any) => {
   console.log(breakdown['the_course_as_a_whole'])
   return (
     <div className={styles.bars}>
-      <h2 style={{margin: '0 4.2vh 2vh'}}>Rating Breakdown</h2>
+      <h2 style={{margin: '0 0 4vh'}}>Rating Breakdown</h2>
       <div className={styles.twoBarsRow}>
-        <ProgressBar value={breakdown['the_course_as_a_whole']} size={20} text={'The course as a whole'}/>
-        <ProgressBar value={breakdown['the_course_content']} size={20} text={'The course content'}/>
+        <ProgressBar value={breakdown['instructor_contribution']} size={23} text={'Instructor’s contribution'}/>
+        <ProgressBar value={breakdown['teaching_effectiveness']} size={23} text={'Teaching effectiveness'}/>
       </div>
       <div className={styles.twoBarsRow}>
-        <ProgressBar value={breakdown['instructor_contribution']} size={20} text={'Instructor\'s contribution'}/>
-        <ProgressBar value={breakdown['instructor_effectiveness']} size={20} text={'Instructor\'s effectiveness'}/>
+        <ProgressBar value={breakdown['usefulness_of_course_content']} size={23} text={'Usefulness of course content'}/>
+        <ProgressBar value={breakdown['course_organization']} size={23} text={'Course organization'}/>
       </div>
       <div className={styles.twoBarsRow}>
-        <ProgressBar value={breakdown['instructor_interest']} size={20} text={'Instuctor\'s interest'}/>
-        <ProgressBar value={breakdown['quiz_section_content']} size={20} text={'Quiz section content'}/>
+        <ProgressBar value={breakdown['clarity_of_concept_explanation']} size={23} text={'Concept explanation'}/>
+        <ProgressBar value={breakdown['reasonable_assigned_work']} size={23} text={'Reasonable assigned work'}/>
       </div>
       <div className={styles.twoBarsRow}>
-        <ProgressBar value={breakdown['grading_techniques']} size={20} text={'Grading techniques'}/>
-        <ProgressBar value={breakdown['amount_learn']} size={20} text={'Amount Learn'}/>
+        <ProgressBar value={breakdown['availability_of_extra_help']} size={23} text={'Availability of extra help'}/>
+        <ProgressBar value={breakdown['grading_techniques']} size={23} text={'Grading techniques'}/>
       </div>
     </div>
   );

@@ -71,20 +71,12 @@ const RatingCard = (props: any) => {
     setCurrentProfessor(val);
   }
 
+
   return (
-    <div className={styles.dropMenuAndContent}>
-      <div className={styles.dropdown}>
-        <span style={{ fontSize: 'large', margin: '5px', fontWeight: 'bold' }}>
-          Select a Professor:{' '}
-        </span>
-        <Select
-          defaultValue={currentProfessor}
-          onChange={changeHandler}
-          style={{ width: '60%', display: 'inline-block', left: '20px' }}
-        >
-          {options}
-        </Select>
-      </div>
+    <div className={styles.dropMenuAndContent}> 
+      <h2 style={{margin: '0 0 6vh', position: 'relative', left: '-11vw', alignSelf:'flex-start'}}>Statistics</h2>
+      {/* <div className={styles.dropdown}>
+      </div> */}
       <div className={styles.content}>
         <ThreeBubbles
           renderData={[

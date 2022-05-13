@@ -61,25 +61,26 @@ const Diagram = (props: any) => {
   return (
     <div>
       <BarChart
-        width={620}
+        width={700}
         height={320}
         data={dataSet}
         margin={{
           top: 5,
-          right: 30,
+          right: 70,
           left: 20,
           bottom: 5,
         }}
+        barGap={'10%'}
       >
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip content={tipContent} />
         <Legend verticalAlign="top" height={36} content={<div> Grade Distribution </div>}/>
-        <Bar dataKey="percentage" barSize={30} fill="#755ebf">
+        <Bar dataKey="percentage" barSize={36} fill="#755ebf">
         <LabelList
             dataKey="topLabel"
             position="top"
-            style={{ fontSize: 'x-small', color: '#755ebf' }}
+            style={{ fontSize: 'xx-small', color: '#755ebf' }}
           />
         </Bar>
       </BarChart>

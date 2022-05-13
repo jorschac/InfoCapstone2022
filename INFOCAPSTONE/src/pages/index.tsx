@@ -17,7 +17,7 @@ function homePage(props: any) {
           width="42px"
           height="42px"
         />
-        <p style={{ margin: 0, color: '#1890FF', fontSize: '38pt' }}>
+        <p style={{ margin: 0, color: 'white', fontSize: '38pt' }}>
           Course Expert
         </p>
       </div>

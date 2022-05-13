@@ -1,9 +1,9 @@
 .barContainer {
     display: flex;
-    width: 40vw;
+    width: 32vw;
     justify-content: center;
     align-items: center;
-    margin: 0 2vw 0;
+    margin: 0 4vw 0 2vw;
 }
 
 .twoBarsRow {
@@ -14,5 +14,6 @@
 
 .bars {
     display: flex;
+    width: 100%;
     flex-direction: column;
 }

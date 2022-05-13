@@ -1,6 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 
 
+/* html {
+  height: 100%;
+} */
+
+
+
+body {
+  height:100%; 
+  margin:0px; 
+  padding:0px;
+  background: linear-gradient(45deg, rgba(255,150,214,1) 0%, rgba(20,4,88,1) 100%);
+  background-attachment: fixed;
+}
 
 .contentWrapper {
   position: absolute;
@@ -14,7 +27,7 @@
   align-items: center;
   justify-content: start;
   flex-flow: column;
-  background-color: #F0F2F5;
+  /* background: linear-gradient(45deg, rgba(255,150,214,1) 0%, rgba(20,4,88,1) 100%); */
 }
 
 .barWrapper {
