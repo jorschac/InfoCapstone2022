@@ -122,7 +122,7 @@ function QACard(props: any) {
                 setAnswerLength(e.target.value.split(' ').length);
               }}
             />
-            <div style={{color: 'red'}}>200 words maximum</div>
+            <div style={{ color: 'red' }}>200 words maximum</div>
           </div>
         )}
         <div style={{ marginTop: '1vh' }}>

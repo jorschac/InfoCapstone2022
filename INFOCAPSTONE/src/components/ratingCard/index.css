@@ -1,4 +1,6 @@
 .content {
+    position: relative;
+    left: -2vw;
     display: flex;
     justify-content: space-between;
     align-items: center;

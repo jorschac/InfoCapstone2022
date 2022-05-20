@@ -34,7 +34,7 @@ const Diagram = (props: any) => {
     //console.log(gradeMap, val)
     //console.log('total is ... ', total, ' key is ', key, ' per is ', Math.round((key/total) * 100))
     return {
-      name: gradeMap[val][0],
+      name: gradeMap[val][1],
       percentage: Math.round((key/total) * 100),
       orgin: val,
       topLabel: `${Math.round((key/total) * 100)}%`,
@@ -61,7 +61,7 @@ const Diagram = (props: any) => {
   return (
     <div>
       <BarChart
-        width={700}
+        width={740}
         height={320}
         data={dataSet}
         margin={{
@@ -70,9 +70,11 @@ const Diagram = (props: any) => {
           left: 20,
           bottom: 5,
         }}
-        barGap={'10%'}
+        barGap={'9'}
+        barSize={'1'}
+        barCategoryGap={'9'}
       >
-        <XAxis dataKey="name" />
+        <XAxis dataKey="name" style={{fontSize:'xx-small'}} interval={0} angle={0} dx={1} dy={1}/>
         <YAxis />
         <Tooltip content={tipContent} />
         <Legend verticalAlign="top" height={36} content={<div> Grade Distribution </div>}/>

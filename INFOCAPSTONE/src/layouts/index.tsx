@@ -6,7 +6,7 @@ import { connect } from 'dva';
 import NavBar from '@/components/navBar'
 import axios from 'axios';
 import { Tag, Divider, Menu } from 'antd';
-
+import {AiFillGithub} from 'react-icons/ai'
 
 /**
  * courseInfo页面最上边的那个显示课程信息的组件
@@ -98,7 +98,7 @@ function headArea(props: any) {
       <div className={styles.cardsContainer}>
         {props.children}
       </div>
-      <div style={{height: '2vh'}}></div>
+      <div style={{height: '5vh', width: '10vw', margin:'0 auto'}}><AiFillGithub/><a style={{color: '#060016', paddingLeft: '5px', position:'relative', top:'-2px'}} href='https://github.com/jorschac/InfoCapstone2022'>Visit our Github</a></div>
     </div>
   );
 }
