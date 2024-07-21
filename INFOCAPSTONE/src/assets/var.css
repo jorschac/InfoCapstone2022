@@ -1,0 +1,8 @@
+:root {
+    --main-bg-color: aquamarine;
+    --main-text-color: rgb(6, 27, 38);
+    --main-border-color: #4e4848;
+    --warning-color: #e8bd10;
+    --success-color: #00fa2a;
+    --error-color: #ff0000;
+  }
